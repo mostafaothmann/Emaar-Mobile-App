@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "Emaar",
+    "slug": "Emaar",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "scheme": "emaar",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.emaar"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.emaar"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-asset",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#ffffff",
+          "image": "./assets/splash-icon.png"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "f6b8d8e2-4ab8-4682-bcc1-036f0e4acd35"
+      }
+    }
+  }
+}
