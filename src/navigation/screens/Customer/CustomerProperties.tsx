@@ -14,6 +14,7 @@ import { ITextNumber } from '@/components/sharedComponents/ITextNumber'
 import ModifiedButton from '@/components/sharedComponents/ModifiedButton'
 import { buttonClassNameInverted, iconClassName, textClassNameInverted } from '@/assets/styleConstants'
 import { red } from 'react-native-reanimated/lib/typescript/Colors'
+import { ChevronDownIcon } from '@/icons2'
 
 
 

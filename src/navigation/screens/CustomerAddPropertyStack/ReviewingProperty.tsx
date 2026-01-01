@@ -88,21 +88,18 @@ export default function ReviewingProperty() {
   //Saving Photos 
   const savePhotos = async () => {
     if (!property) return;
-
     try {
       const image11 = await sendPhotoToBackend(image1);
       const image22 = await sendPhotoToBackend(image2);
       const image33 = await sendPhotoToBackend(image3);
       const image44 = await sendPhotoToBackend(image4);
       const image55 = await sendPhotoToBackend(image5);
-
       console.log(image11)
       property.image1 = image11;
       property.image2 = image22;
       property.image3 = image33;
       property.image4 = image44;
       property.image5 = image55;
-
     } catch (error) {
       console.error('Saving photos failed:', error);
     }

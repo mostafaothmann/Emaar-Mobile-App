@@ -29,10 +29,6 @@ export default function ChooseTypeOfProperty() {
     switch (fileName) {
       case "villa":
         return require('@/assets/images/villa.jpg');
-      case "apartment":
-        return require('@/assets/images/apartment.jpg');
-      case "townhouse":
-        return require('@/assets/images/townhouse.jpg');
 
     }
   };
@@ -66,19 +62,20 @@ export default function ChooseTypeOfProperty() {
       >
         {/* Moved flex-row + flex-wrap here */}
         <View className='flex-row flex-wrap w-full justify-center '>
-
+          <ScrollView
+            contentContainerStyle={{ paddingVertical: 40, alignItems: 'center',paddingBottom:120 }}
+          >
           {dataTypeOfProperties?.map((item, index) => (
             <Pressable
               key={index}
               onPress={() => navigateToChooseTypeOfWorkPage(item.id)}
               className='m-[10] rounded-full w-[70%] h-[150] '>
               <ImageBackground
-                source={getLocalImage(item.image)}            // your image
+                source={{ uri: item.image }}            // your image
                 resizeMode="cover"        // like background-size: cover
                 className='w-full h-full rounded-[10] opacity-90 justify-end items-start pl-[10] overflow-hidden ' // align content inside
               >
-                <View
-                >
+                <View>
                   <Text className='text-secondary dark:text-primary text-center text-h1 '>
                     {item.name}
                   </Text>
@@ -86,6 +83,7 @@ export default function ChooseTypeOfProperty() {
               </ImageBackground>
             </Pressable>
           ))}
+          </ScrollView>
         </View>
 
       </ScrollView>

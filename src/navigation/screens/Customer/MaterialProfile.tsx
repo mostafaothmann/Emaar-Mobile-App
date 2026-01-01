@@ -1,7 +1,6 @@
 import { Text, View } from 'react-native'
 import { RouteProp, useRoute } from '@react-navigation/native';
 import { RootStackParamList } from '@/navigation';
-import paint from '@/assets/images/paint.jpg'
 import { useMaterialesDataStore } from '@/stores/materialesStore/data.store'
 import { ScrollView } from 'react-native';
 import { ModifiedImage } from '@/components/sharedComponents/ModifiedImage';

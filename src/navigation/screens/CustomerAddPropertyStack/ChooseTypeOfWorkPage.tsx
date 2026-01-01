@@ -47,23 +47,27 @@ export default function ChooseTypeOfWorkPage() {
       >
         {/* Moved flex-row + flex-wrap here */}
         <View className='flex-row flex-wrap w-full justify-center items-center '>
-          {dataTypeOfWork?.map((item, index) => (
-            <Pressable
-              key={index}
+          <ScrollView
+            contentContainerStyle={{ paddingVertical: 40, alignItems: 'center', paddingBottom: 220 }}>
+            {dataTypeOfWork?.map((item, index) => (
+              <Pressable
+                key={index}
+                onPress={() => navigateToChooseTypeOfOwneringPage(item.id)}
+                className='m-[10] rounded-[10] w-[80%] h-[120] bg-secondary dark:bg-primary'>
+                <View
+                  className='flex-1 justify-center items-center'
+                >
+                  <Text className='text-primary dark:text-secondary text-center text-body'>
+                    {item.name}
+                  </Text>
+                  <Text className='text-primary dark:text-secondary text-center text-body-2'>
+                    {item.description}
+                  </Text>
+                </View>
 
-              onPress={() => navigateToChooseTypeOfOwneringPage(item.id)}
-              className='m-[10] rounded-[10] w-[40%] h-[120] bg-secondary dark:bg-primary'>
-
-              <View
-                className='flex-1 justify-center items-center'
-              >
-                <Text className='text-primary dark:text-secondary text-center text-h1'>
-                  {item.name}
-                </Text>
-              </View>
-
-            </Pressable>
-          ))}
+              </Pressable>
+            ))}
+          </ScrollView>
         </View>
 
       </ScrollView>

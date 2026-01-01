@@ -1,6 +1,5 @@
 import { FlatList, Pressable, ScrollView, Text, TouchableOpacity, View } from 'react-native'
 import React, { useCallback, useContext, useEffect, useRef, useState } from 'react'
-import paint from '@/assets/images/paint.jpg'
 import { MaterialCard } from '@/components/customerComponents/MaterialCard'
 import { useMaterialesDataStore } from '@/stores/materialesStore/data.store';
 import { useFocusEffect } from '@react-navigation/native';

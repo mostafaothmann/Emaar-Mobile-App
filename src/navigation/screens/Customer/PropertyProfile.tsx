@@ -10,7 +10,6 @@ import { ModifiedImage } from '@/components/sharedComponents/ModifiedImage';
 import { ITextStringU } from '@/components/sharedComponents/ITextStringU';
 import { ITextNumberU } from '@/components/sharedComponents/ITextNumberU';
 import ModifiedButton from '@/components/sharedComponents/ModifiedButton';
-import villa from '@/assets/images/villa.jpg'
 import { TextAreaU } from '@/components/sharedComponents/TextAreaU';
 import { GestureHandlerRootView, TextInput } from 'react-native-gesture-handler';
 import BottomSheet, { BottomSheetView } from '@gorhom/bottom-sheet';
@@ -70,7 +69,7 @@ export function PropertyProfile() {
     return (
       <GestureHandlerRootView >
         <View className='items-center justify-center flex-1 bg-secondary dark:bg-primary' >
-          <ModifiedImage imageClassName={imageClassName} src={villa} mode='stretch' ></ModifiedImage>
+          <ModifiedImage imageClassName={imageClassName} src={{uri:propertyD.image1}} mode='stretch' ></ModifiedImage>
           <ScrollView
             contentContainerStyle={{
               paddingVertical: 40,

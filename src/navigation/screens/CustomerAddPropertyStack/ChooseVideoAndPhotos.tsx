@@ -392,9 +392,7 @@ const ChooseVideoAndPhotos = () => {
                   />
                 )
               }
-
             </View>
-
             {/* Third Photo */}
             <View className='w-[40%] h-[120] border-4 rounded-[10]  border-secondary dark:border-primary p-0 m-[10] overflow-hidden
             bg-forty'>

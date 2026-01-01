@@ -3,7 +3,7 @@ import { Text, TextInput, View } from 'react-native';
 
 interface ITextProps {
   text: string;
-  value: number;
+  value: string;
   textClassName: string;
   inputClassName: string;
   onChange: (newValue: string) => void;
@@ -16,7 +16,7 @@ export function ITextNumber({ text, value, onChange,textClassName,inputClassName
         {text}
       </Text>
       <TextInput
-        value={String(value)}
+        value={value}
         onChangeText={onChange}
         keyboardType="numeric"
         className={inputClassName}
